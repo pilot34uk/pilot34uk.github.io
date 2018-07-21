@@ -1,0 +1,202 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+	display: flex;
+	flex-direction:column;
+	transition-duration: 100ms;
+	transition-property: flex;
+	animation-name: wobbleacross;
+	animation-duration: 20000ms;
+}
+
+.robots:hover{
+    flex-direction: flex-end;
+}
+
+.head, 
+.torso, 
+.left_leg, 
+.right_leg,
+.right_arm {
+	 background-color: #ff0000;
+}
+ 
+.left_arm
+ {
+	 background-color: #e60000;
+}
+
+.head { 
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 200px; 
+	margin: 0 auto;
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes{
+	justify-content: center;
+	margin: 5px;
+    width: 30px;
+    height: 5px;
+    border: 5px solid rgba(0,0,0,1);
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    transition: 50ms ease-in-out;
+    transition-property:transform,background-color,border,width,height,opacity;
+    animation-name: wobbleright;
+	animation-duration: 20000ms;
+   }
+
+.eyes:hover{
+	transform: rotate(360deg);
+	border-radius: 50%;
+	background-color: yellow;
+	height: 20px;
+	   }
+
+@keyframes wobbleacross{
+      from{transform: translateX(-200px);
+
+    }
+        to{transform: translateX(300px);
+
+    }
+  }	   
+
+@keyframes wobbleright{
+      from{transform: translateX(-10px);
+
+    }
+        to{transform: translateX(60px);
+
+    }
+   }
+
+@keyframes leftarm{
+      from{transform: translateX(0);
+
+    }
+        to{transform: translateX(90px);
+
+    }
+   }
+
+@keyframes rightarm{
+      from{transform: translateX(0);
+
+    }
+        to{transform: translateX(-80px);
+
+    }
+   }
+
+@keyframes leftleg{
+      from{transform: translateX(0);
+
+    }
+        to{transform: translateX(20px);
+
+    }
+   }
+
+@keyframes rightleg{
+      from{transform: translateX(0);
+
+    }
+        to{transform: translateX(-20px);
+
+    }
+   }
+
+.torso {
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+   } 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+	animation-name: leftarm;
+	animation-duration: 20000ms;
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+	animation-name: rightarm;
+	animation-duration: 20000ms;
+} 
+
+ .head:hover {
+ 	width: 170px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	width: 300px; 
+	height: 150px;
+	animation-name: spin;
+	animation-duration: 20000ms;
+} 
+
+.upper_body:hover{
+	justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.lower_body { 
+	display: flex;
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+	animation-name: leftleg;
+	animation-duration: 20000ms;
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 30px;
+	animation-name: rightleg;
+	animation-duration: 20000ms;
+}  
+
+.right_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
